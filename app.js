@@ -31,12 +31,21 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
 }
 
 let output = '';
-const position = (num) => {
-    return num;
+const l = 6.6;
+const radian = (deg) => {
+    return (Math.PI * deg) / 180;
+}
+const angle = (num) => {
+    return radian(30 * (num - 3));
+}
+const position = (ang) => {
+    return `${l * Math.cos(ang)}rem, ${l * Math.sin(ang)}rem`;
 }
 for (let i = 0; i < 12; ++i) {
     output += `
-    <span class="number _${i + 1}">${i + 1}</span>
+    <span class="number _${i + 1}" style="transform: translate(${position(angle(i + 1))});">
+    ${i + 1}
+    </span>
     `;
 }
 _numbers.innerHTML = output;

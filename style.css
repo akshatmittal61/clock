@@ -29,13 +29,18 @@ body {
 	color: var(--tcolor);
 	width: 100vw;
 	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	letter-spacing: 0.025rem;
 	word-spacing: 0.25rem;
 	line-height: 1.25rem;
 	transition: all 200ms ease-in-out;
+}
+body,
+.clock-container,
+.numbers,
+.material-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .theme {
 	position: fixed;
@@ -43,9 +48,7 @@ body {
 	right: 2rem;
 }
 .clock-container {
-	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	flex-flow: column;
 }
 .clock-container > * {
@@ -84,48 +87,9 @@ body {
 .numbers {
 	width: 100%;
 	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 .number {
 	position: absolute;
-}
-._12 {
-	transform: translate(0, -6.5rem);
-}
-._1 {
-	transform: translate(3.25rem, -5.629rem);
-}
-._2 {
-	transform: translate(5.629rem, -3.25rem);
-}
-._3 {
-	transform: translate(6.5rem, 0);
-}
-._4 {
-	transform: translate(5.629rem, 3.25rem);
-}
-._5 {
-	transform: translate(3.25rem, 5.629rem);
-}
-._6 {
-	transform: translate(0, 6.5rem);
-}
-._7 {
-	transform: translate(-3.25rem, 5.629rem);
-}
-._8 {
-	transform: translate(-5.629rem, 3.25rem);
-}
-._9 {
-	transform: translate(-6.5rem, 0);
-}
-._10 {
-	transform: translate(-5.629rem, -3.25rem);
-}
-._11 {
-	transform: translate(-3.25rem, -5.629rem);
 }
 .center-point {
 	background-color: var(--blue);
@@ -147,9 +111,6 @@ body {
 .material-icons {
 	user-select: none;
 	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 .dispn {
 	display: none !important;
