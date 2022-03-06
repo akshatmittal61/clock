@@ -115,3 +115,11 @@ body,
 .dispn {
 	display: none !important;
 }
+.audio {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+}
+.audio audio{
+	display: none;
+}
