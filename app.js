@@ -117,6 +117,7 @@ setTime();
 setInterval(setTime, 1000);
 
 audioControl.addEventListener("click", () => {
+	myAudio.play();
 	if (audioControl.innerHTML === "volume_up") {
 		audioControl.innerHTML = "volume_off";
 		myAudio.muted = true;
